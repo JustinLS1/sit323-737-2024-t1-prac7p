@@ -1,0 +1,38 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mydeployment
+  labels:
+    app: myapp
+    tier: frontend
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      tier: frontend
+  template:
+    metadata:
+      labels:
+        tier: frontend
+    spec:
+      containers:
+      - name: mynode
+        image: justinls1/calculator3:latest
+        ports:
+        - containerPort: 3000
+        env:
+        - name: MONGO_USER
+          valueFrom:
+            secretKeyRef:
+              name: mongodb-secret
+              key: username
+        - name: MONGO_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: mongodb-secret
+              key: password
+        - name: MONGO_DB
+          value: mydb
+        - name: MONGO_URI
+          value: mongodb://$(MONGO_USER):$(MONGO_PASSWORD)@mongo-svc:27017/$(MONGO_DB)
+

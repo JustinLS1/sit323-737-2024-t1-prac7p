@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: mypod
+  labels:
+    run: mypod
+spec:
+  containers:
+    - image: justinls1/calculator1:latest
+      name: nodewebapp
+      ports:
+        - containerPort: 3000
+  dnsPolicy: ClusterFirst
+  restartPolicy: Always
+  
+

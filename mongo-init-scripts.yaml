@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: mongo-init-scripts
+  labels:
+    app: mongo
+data:
+  user.js: |
+    db = db.getSiblingDB('mydatabase');
+
+    db.createUser({
+      user: 'appuser',
+      pwd: 'apppassword',
+      roles: [
+        { role: 'readWrite', db: 'mydatabase' }
+      ]
+    });

@@ -1,0 +1,13 @@
+{"level":"info","message":"New addition operation requested: 24 addition 2","service":"calculator-microservice"}
+{"level":"info","message":"New subtraction operation requested: 24 subtraction 2","service":"calculator-microservice"}
+{"level":"info","message":"New multiplication operation requested: 24 multiplication 2","service":"calculator-microservice"}
+{"level":"info","message":"New division operation requested: 24 division 2","service":"calculator-microservice"}{"level":"info","message":"New addition operation requested: 24 addition 2","service":"calculator-microservice"}{"level":"info","message":"New exponentiation operation requested: 24 raised to the power of 2","service":"calculator-microservice"}
+{"level":"info","message":"New square root operation requested: square root of 25","service":"calculator-microservice"}
+{"level":"error","message":"Invalid input for square root","service":"calculator-microservice"}
+{"level":"info","message":"New square root operation requested: square root of 25","service":"calculator-microservice"}
+{"level":"info","message":"New modulo operation requested: 25 modulo 5","service":"calculator-microservice"}
+{"level":"info","message":"New modulo operation requested: 50 modulo 5","service":"calculator-microservice"}
+{"level":"info","message":"New modulo operation requested: 12 modulo 4","service":"calculator-microservice"}
+{"level":"info","message":"New modulo operation requested: 13 modulo 4","service":"calculator-microservice"}
+{"level":"info","message":"New exponentiation operation requested: 13 exponentiation 4","service":"calculator-microservice"}
+{"level":"info","message":"New exponentiation operation requested: 13 exponentiation 2","service":"calculator-microservice"}

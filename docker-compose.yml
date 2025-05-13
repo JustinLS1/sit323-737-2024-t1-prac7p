@@ -1,0 +1,16 @@
+version: '3'
+services:
+  calculator:
+    build: .
+    volumes:
+      - .:/usr/src/app
+    container_name: docker-node-tut
+    restart: always
+    ports:
+      - "3000:3000"
+    #env_file: .env
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:3000/"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
